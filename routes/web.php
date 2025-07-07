@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\TarefasController;
 use Illuminate\Support\Facades\Route;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -16,8 +16,8 @@ use Barryvdh\DomPDF\Facade\Pdf;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('produtos/pdf', [ProdutosController::class, 'gerarPdf'])->name('produtos.pdf');
-Route::resource('produtos', ProdutosController::class);
+Route::get('tarefas/pdf', [TarefasController::class, 'gerarPdf'])->name('tarefas.pdf');
+Route::resource('tarefas', TarefasController::class);
 
 
 Route::get('/', function () {

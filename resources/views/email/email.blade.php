@@ -1,15 +1,15 @@
-<!--resources/views/emails/novo_item.blade.php-->
+<!--resources/views/email/email.blade.php-->
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Item Criado</title>
+    <title>Tarefa Criada</title>
 </head>
 <body>
-    <h1>Um novo item foi criado</h1>
-    <p>Nome do item: {{ $item->nome }}</p>
-    <p>Descrição: {{ $item->descricao }}</p>
-    <p>Preço: {{ $item->preco }}</p>
+    <h1>Uma nova tarefa foi criada</h1>
+    <p>Nome da tarefa: {{ $item->nome }}</p>
+    <p>Observação: {{ $item->observacao }}</p>
+    <p>Estado: {{ ucfirst($item->estado) }}</p>
     <a href="{{ route('email.simulado', $item->id) }}">
     <button>Simular Envio de Email</button>
 </a>
