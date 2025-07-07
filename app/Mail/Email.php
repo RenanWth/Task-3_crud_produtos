@@ -8,30 +8,30 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Produto;
+use App\Models\Tarefa;
 
 class Email extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $produto;
+    public $tarefa;
 
-    public function __construct(Produto $produto)
+    public function __construct(Tarefa $tarefa)
     {
-        $this->produto = $produto;
+        $this->tarefa = $tarefa;
     }
 
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Novo Produto Criado',
+            subject: 'Nova Tarefa Criada',
         );
     }
 
     public function content(): Content
     {
         return new Content(
-            view: 'email.blase.php', 
+            view: 'email.email', 
         );
     }
 
