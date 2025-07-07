@@ -40,7 +40,7 @@
             <div class="mb-4">
                 <label for="estado" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Estado</label>
                 <select name="estado" id="estado" class="mt-1 block w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                    <option value="ativa" {{ old('estado') == 'ativa' ? 'selected' : '' }}>Ativa</option>
+                    <option value="parada" {{ old('estado') == 'parada' ? 'selected' : '' }}>Parada</option>
                     <option value="em andamento" {{ old('estado') == 'em andamento' ? 'selected' : '' }}>Em andamento</option>
                     <option value="concluida" {{ old('estado') == 'concluida' ? 'selected' : '' }}>Concluída</option>
                 </select>

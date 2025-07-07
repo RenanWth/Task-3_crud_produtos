@@ -41,7 +41,7 @@
                     <label for="estado" class="block text-sm font-bold text-gray-800 dark:text-gray-100">Estado</label>
                     <select name="estado" id="estado" class="mt-1 block w-full border-blue-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                         <option value="">Todos</option>
-                        <option value="ativa" {{ request('estado') == 'ativa' ? 'selected' : '' }}>Ativa</option>
+                        <option value="parada" {{ request('estado') == 'parada' ? 'selected' : '' }}>Parada</option>
                         <option value="em andamento" {{ request('estado') == 'em andamento' ? 'selected' : '' }}>Em andamento</option>
                         <option value="concluida" {{ request('estado') == 'concluida' ? 'selected' : '' }}>Concluída</option>
                     </select>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->text('observacao')->nullable();
-            $table->enum('estado', ['ativa', 'em andamento', 'concluida'])->default('ativa');
+            $table->enum('estado', ['parada', 'em andamento', 'concluida'])->default('parada');
             $table->timestamps();
         });
     }
